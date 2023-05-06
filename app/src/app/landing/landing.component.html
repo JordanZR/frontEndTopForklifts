@@ -1,0 +1,98 @@
+<div class="container-fluid" id="presentacion">
+  <div class="container">
+    <div class="row" id="saludo">
+      <div class="col-5" id="textoSaludo">
+        <h1>Somos Top Forklifts, tu opción garantizada. </h1>
+        <br>
+        <h4>¡El Workshop más completo para Montacargas en El Salvador! Contamos con:</h4>
+        <br>
+        <h4>
+          <ul>
+            <li>Renta de Unidades</li>
+            <br>
+            <li>Reparaciones</li>
+            <br>
+            <li>Mantenimiento</li>
+            <br>
+            <li>Venta de repuestos</li>
+          </ul>
+        </h4>
+      </div>
+      <div class="col-7">
+        <!--<img id="montacargas" class="img-fluid" src="./assets/MontacargasPortada.jpeg">-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid"  id="razones">
+  <div class="container">
+    <h1>¿Pór qué Top Forklifts?</h1>
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-thumbnail" src="https://cdn-icons-png.flaticon.com/512/7261/7261619.png">
+          <h2 class="fw-normal">Seguridad</h2>
+          <p>Garantizamos tu compra, acompañada de una previa cotización y crédito fiscal</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-thumbnail" src="https://cdn-icons-png.flaticon.com/512/610/610333.png">
+          <h2 class="fw-normal">Calidad</h2>
+          <p>Tu satisfacción es nuestra prioridad, nuestros clientes hablan por nosotros</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-thumbnail" src="https://cdn-icons-png.flaticon.com/512/2997/2997300.png">
+          <h2 class="fw-normal">Puntualidad</h2>
+          <p>Tu tiempo es valioso, respetamos la fecha acordada para la entrega de respuestos y rerparaciones</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="contacto">
+  <h1>¡Quiero mi cotización!</h1>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6" id="indicaciones">
+        <br>
+        <h4>Llena el siguiente formulario con la información que necesites presupuestar. Como regalo de bienvenida, ¡te regalamos el 10% sobre el valor total cotizado!</h4>
+        <img class="mx-auto d-block" src="https://cdn-icons-png.flaticon.com/512/1139/1139982.png">
+      </div>
+      <form [formGroup]="formCotizacion" class="col-lg-6" id="formulario">
+        <div class="mb-3">
+          <label class="form-label">Nombre y apellido</label>
+          <div class="input-group">
+            <input type="text" aria-label="First name" formControlName="nombre" class="form-control">
+            <input type="text" aria-label="Last name" formControlName="apellido" class="form-control">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="empresa" class="form-label">Empresa</label>
+          <input type="email" maxlength="20" class="form-control" formControlName="empresa" id="empresa">
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Tu correo eletrónico</label>
+          <input type="email" class="form-control" id="correo" formControlName="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Tu número de telefono</label>
+          <input type="text" maxlength="8" class="form-control" id="telefono" formControlName="telefono">
+        </div>
+        <div class="mb-3">
+          <label for="informacion" class="form-label">¿Qué necesitas?</label>
+          <textarea class="form-control" maxlength="200" id="informacion" formControlName="detalle" rows="3"></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="text-center" id="enviar">
+    <button [disabled]="formCotizacion.invalid" (click)="send()" type="button" class="btn btn-success">Reclamar regalo</button>
+  </div>
+
+</div>

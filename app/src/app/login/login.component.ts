@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../login.service';
 import Swal from 'sweetalert2'
+import * as Validator from 'validate.js'
 
 
 @Component({
@@ -19,7 +20,8 @@ export class LoginComponent {
   private check:boolean = false
   login():any{
 
-    //comprobaciones
+    //validations
+
 
     this.loginService.login().subscribe((data)=>{
       for(let i = 0;i<data.length;i++){
