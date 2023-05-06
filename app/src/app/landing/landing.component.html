@@ -63,36 +63,36 @@
         <h4>Llena el siguiente formulario con la información que necesites presupuestar. Como regalo de bienvenida, ¡te regalamos el 10% sobre el valor total cotizado!</h4>
         <img class="mx-auto d-block" src="https://cdn-icons-png.flaticon.com/512/1139/1139982.png">
       </div>
-      <form [formGroup]="formCotizacion" class="col-lg-6" id="formulario">
+      <div class="col-lg-6" id="formulario">
         <div class="mb-3">
           <label class="form-label">Nombre y apellido</label>
           <div class="input-group">
-            <input type="text" aria-label="First name" formControlName="nombre" class="form-control">
-            <input type="text" aria-label="Last name" formControlName="apellido" class="form-control">
+            <input type="text" aria-label="First name" [(ngModel)]="nombre" class="form-control">
+            <input type="text" aria-label="Last name" [(ngModel)]="apellido" class="form-control">
           </div>
         </div>
         <div class="mb-3">
           <label for="empresa" class="form-label">Empresa</label>
-          <input type="email" maxlength="20" class="form-control" formControlName="empresa" id="empresa">
+          <input type="email" maxlength="20" class="form-control" [(ngModel)]="empresa" id="empresa">
         </div>
         <div class="mb-3">
           <label for="correo" class="form-label">Tu correo eletrónico</label>
-          <input type="email" class="form-control" id="correo" formControlName="email" placeholder="name@example.com">
+          <input type="email" class="form-control" id="correo" [(ngModel)]="correo" placeholder="name@example.com">
         </div>
         <div class="mb-3">
           <label for="telefono" class="form-label">Tu número de telefono</label>
-          <input type="text" maxlength="8" class="form-control" id="telefono" formControlName="telefono">
+          <input type="text" maxlength="8" class="form-control" id="telefono" [(ngModel)]="telefono">
         </div>
         <div class="mb-3">
           <label for="informacion" class="form-label">¿Qué necesitas?</label>
-          <textarea class="form-control" maxlength="200" id="informacion" formControlName="detalle" rows="3"></textarea>
+          <textarea class="form-control" maxlength="200" id="informacion" [(ngModel)]="contenido" rows="3"></textarea>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 
   <div class="text-center" id="enviar">
-    <button [disabled]="formCotizacion.invalid" (click)="send()" type="button" class="btn btn-success">Reclamar regalo</button>
+    <button  (click)="send()" type="button" class="btn btn-success">Reclamar regalo</button>
   </div>
 
 </div>

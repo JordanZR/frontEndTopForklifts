@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../login.service';
 import Swal from 'sweetalert2'
-import * as Validator from 'validate.js'
 
 
 @Component({

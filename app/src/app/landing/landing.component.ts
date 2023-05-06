@@ -1,5 +1,4 @@
 import { Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import Swal from 'sweetalert2'
 import { EmailService } from '../email.service';
 
@@ -10,38 +9,18 @@ import { EmailService } from '../email.service';
 })
 export class LandingComponent implements OnInit{
 
-  public formCotizacion:FormGroup = new FormGroup({})
-  public textValidator:any[] = ['',
-    [
-      Validators.pattern('[A-z]+'),
-      Validators.maxLength(20)
-    ]
-  ]
-  public email:string = ""
-  public detalle:string = ""
-
-  constructor(private formBuilder: FormBuilder, private emailService: EmailService) {
+  constructor(private emailService: EmailService) {
 
   }
+
+  public nombre:string = ""
+  public apellido:string = ""
+  public correo:string = ""
+  public telefono:string = ""
+  public empresa:string = ""
+  public contenido:string = ""
   ngOnInit():void {
-    this.formCotizacion = this.formBuilder.group({
-      email: ['',
-        [
-          Validators.email]],
-      telefono: ['',
-        [
-          Validators.pattern('[0-9]{8}')
-        ]
-      ],
-      nombre: this.textValidator,
-      apellido: this.textValidator,
-      empresa: ['',
-        Validators.required
-      ],
-      detalle: ['',
-        Validators.required
-      ]
-    })
+
   }
 
   send():any{
@@ -50,21 +29,21 @@ export class LandingComponent implements OnInit{
       'Nos pondremos en contacto contigo al a brevedad posible!',
       'success'
     )
+
     this.emailService.sendEmail(
-      this.formCotizacion.value.email,
-      this.formCotizacion.value.detalle,
-      this.formCotizacion.value.nombre,
-      this.formCotizacion.value.apellido,
-      this.formCotizacion.value.telefono,
-      this.formCotizacion.value.empresa
+      this.correo,
+      this.nombre,
+      this.apellido,
+      this.telefono,
+      this.empresa,
+      this.contenido
     ).subscribe()
 
-    this.formCotizacion.reset()
-
-    /*Receive data
-    this.emailService.nameOfFunction(parameters).subscribe(() => {
-      actions
-    });
-    */
+  this.nombre = ""
+  this.apellido = ""
+  this.correo = ""
+  this.telefono = ""
+  this.empresa = ""
+  this.contenido = ""
   }
 }

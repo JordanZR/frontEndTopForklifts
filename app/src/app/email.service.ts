@@ -12,14 +12,14 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmail(email:string, detalle:string, nombre:string, apellido:string, telefono:string, empresa:string): Observable<any> {
+  sendEmail(correo:string, nombre:string, apellido:string, telefono:string, empresa:string, contenido:string): Observable<any> {
     return this.http.post<any>(this.apiUrl, {
-      email: email,
-      detalle:detalle,
+      correo: correo,
       nombre: nombre,
       apellido: apellido,
       telefono: telefono,
-      empresa: empresa
+      empresa: empresa,
+      contenido: contenido
     });
   }
 
