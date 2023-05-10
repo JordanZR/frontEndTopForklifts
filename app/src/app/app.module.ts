@@ -8,12 +8,16 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { LandingComponent } from './landing/landing.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { NavComponent } from './nav/nav.component';
+import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LandingComponent
+    LandingComponent,
+    NavComponent,
+    CotizacionesComponent
   ],
   imports: [
     BrowserModule,
