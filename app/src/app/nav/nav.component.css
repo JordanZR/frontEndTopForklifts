@@ -1,0 +1,12 @@
+#nav-dark{
+  background-color: black;
+  margin-top: 2%;
+}
+#nav-dark a{
+  color: white;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-decoration: none;
+  z-index: 1;
+}

@@ -1,0 +1,24 @@
+<app-nav></app-nav>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Estado</th>
+    <th scope="col">ID</th>
+    <th scope="col">Correo</th>
+    <th scope="col">Empresa</th>
+    <th scope="col">Telefono</th>
+    <th scope="col">Contenido</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cotizacion of cotizaciones">
+    <th *ngIf="cotizacion.status_=='pendiente'"><button type="button" class="btn btn-success" (click)="updateCotizacion('completada',cotizacion.id)">Completar</button></th>
+    <th *ngIf="cotizacion.status_=='completada'"><button type="button" class="btn btn-danger" (click)="updateCotizacion('pendiente', cotizacion.id)">Pendiente</button></th>
+    <th scope="row">{{cotizacion.id}}</th>
+    <td>{{cotizacion.correoCliente}}</td>
+    <td>{{cotizacion.empresaCliente}}</td>
+    <td>{{cotizacion.telefonoCliente}}</td>
+    <td>{{cotizacion.contenido}}</td>
+  </tr>
+  </tbody>
+</table>
