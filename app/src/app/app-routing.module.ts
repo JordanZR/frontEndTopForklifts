@@ -5,7 +5,7 @@ import {LandingComponent} from "./landing/landing.component";
 import {CotizacionesComponent} from "./cotizaciones/cotizaciones.component";
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'landing', component: LandingComponent},
   {path: 'cotizaciones', component: CotizacionesComponent}
 ];
