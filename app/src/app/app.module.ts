@@ -10,6 +10,7 @@ import { LandingComponent } from './landing/landing.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { NavComponent } from './nav/nav.component';
 import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
+import { InventarioComponent } from './inventario/inventario.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
     LoginComponent,
     LandingComponent,
     NavComponent,
-    CotizacionesComponent
+    CotizacionesComponent,
+    InventarioComponent
   ],
   imports: [
     BrowserModule,

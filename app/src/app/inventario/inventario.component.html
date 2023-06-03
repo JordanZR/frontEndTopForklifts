@@ -1,0 +1,38 @@
+<app-nav></app-nav>
+<div class="row" id="contenido">
+  <div class="col">
+      <h1>Informacion</h1>
+      <input [(ngModel)]="nombre" type="text" class="inputsInformacion" maxlength="30" placeholder="Nombre de la pieza">
+      <input [(ngModel)]="modelo" type="text" class="inputsInformacion" maxlength="20" placeholder="Modelo">
+      <input [(ngModel)]="cantidad" type="number" class="inputsInformacion" placeholder="Cantidad">
+      <input [(ngModel)]="precio" type="text" class="inputsInformacion" placeholder="Precio unitario">
+      <button class="btn btn-success" (click)="send()">Agregar</button>
+  </div>
+  <div class="col">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Opcion 1</th>
+        <th scope="col">Opcion 2</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let inventario of inventario">
+        <th scope="row">{{inventario.id}}</th>
+        <td>{{inventario.nombre}}</td>
+        <td>{{inventario.modelo}}</td>
+        <td>{{inventario.cantidad}}</td>
+        <td>{{inventario.precio}}</td>
+        <td id="boton-modificar" (click)="update(inventario)">Modificar</td>
+        <td id="boton-eliminar" (click)="delete(inventario.id)">Eliminar</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
