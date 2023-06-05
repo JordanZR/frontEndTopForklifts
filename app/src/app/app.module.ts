@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { NavComponent } from './nav/nav.component';
 import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 import { InventarioComponent } from './inventario/inventario.component';
+import { BoletaComponent } from './boleta/boleta.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InventarioComponent } from './inventario/inventario.component';
     LandingComponent,
     NavComponent,
     CotizacionesComponent,
-    InventarioComponent
+    InventarioComponent,
+    BoletaComponent
   ],
   imports: [
     BrowserModule,
