@@ -1,6 +1,7 @@
 #contenido{
   margin-top: 2em;
   margin-bottom: 4em;
+  width: 100%;
 }
 #contenido button{
   width: 10%;

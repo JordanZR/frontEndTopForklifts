@@ -1,0 +1,48 @@
+<app-nav></app-nav>
+<div class="container" id="selectsCheckBoleta">
+  <div class="row">
+    <div class="col">
+      <h4>Quincena: </h4>
+      <select (click)="filtroQuincena()" id="selectQuincena" class="form-select">
+        <option value="-">-</option>
+        <option value="1">#1</option>
+        <option value="2">#2</option>
+      </select>
+    </div>
+    <div class="col">
+      <h4>Mes: </h4>
+      <select (click)="filtroQuincena()" id="selectMes" class="form-select">
+        <option value="-">-</option>
+        <option value="{{mes}}" *ngFor="let mes of meses">{{mes}}</option>
+      </select>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">#EID</th>
+      <th scope="col">Mes</th>
+      <th scope="col">Quincena</th>
+      <th scope="col">Salario</th>
+      <th scope="col">AFP</th>
+      <th scope="col">Renta</th>
+      <th scope="col">ISSS</th>
+      <th scope="col">Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let boleta of boletas">
+      <th scope="row">{{boleta.id}}</th>
+      <td>{{boleta.idEmpleado}}</td>
+      <td>{{boleta.mes}}</td>
+      <td>{{boleta.quincena}}</td>
+      <td>{{boleta.salario | currency}}</td>
+      <td>{{boleta.afp}}</td>
+      <td>{{boleta.renta}}</td>
+      <td>{{boleta.isss}}</td>
+      <td>{{boleta.totalNeto}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

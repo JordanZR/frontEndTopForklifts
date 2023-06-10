@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<div class="row" id="form">
+  <h4>Empleado: </h4>
+  <select [(ngModel)]="idEmpleado"  class="form-select" aria-label="Default select example">
+    <option *ngFor="let user of users" value="{{user.id}}">{{user.nombre + " " + user.apellido}}</option>
+  </select>
+  <h4 class="inputs-form">Salario quincenal: </h4>
+  <input [(ngModel)]="salario" type="number" placeholder="$0.00">
+  <h4 class="inputs-form">Mes: </h4>
+  <select [(ngModel)]="mes" class="form-select">
+    <option value="{{mes}}" *ngFor="let mes of meses">{{mes}}</option>
+  </select>
+  <h4 class="inputs-form">Quincena: </h4>
+  <select [(ngModel)]="quincena" class="form-select">
+    <option value="1">#1</option>
+    <option value="2">#2</option>
+  </select>
+  <button class="btn btn-success" (click)="send()">Crear</button>
+</div>

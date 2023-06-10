@@ -11,7 +11,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { NavComponent } from './nav/nav.component';
 import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 import { InventarioComponent } from './inventario/inventario.component';
-import { BoletaComponent } from './boleta/boleta.component';
+import { AddBoletaComponent } from './add-boleta/add-boleta.component';
+import { CheckBoletaComponent } from './check-boleta/check-boleta.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BoletaComponent } from './boleta/boleta.component';
     NavComponent,
     CotizacionesComponent,
     InventarioComponent,
-    BoletaComponent
+    AddBoletaComponent,
+    CheckBoletaComponent
   ],
   imports: [
     BrowserModule,
