@@ -18,6 +18,7 @@
         <th scope="col">Cantidad</th>
         <th scope="col">Precio</th>
         <th scope="col">Ultima modificacion</th>
+        <th scope="col">EID</th>
         <th scope="col">Opcion 1</th>
         <th scope="col">Opcion 2</th>
       </tr>
@@ -30,6 +31,7 @@
         <td>{{inventario.cantidad}}</td>
         <td>{{inventario.precio}}</td>
         <td>{{inventario.fecha_modificacion}}</td>
+        <td>{{inventario.trabajador_modificacion_id}}</td>
         <td id="boton-modificar" (click)="update(inventario)">Modificar</td>
         <td id="boton-eliminar" (click)="delete(inventario.id)">Eliminar</td>
       </tr>
