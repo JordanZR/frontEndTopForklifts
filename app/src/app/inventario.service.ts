@@ -45,7 +45,7 @@ export class InventarioService {
       cantidad:cantidad_,
       precio:precio_,
       trabajador_modificacion_id:1,
-      fecha_modificacion:formattedDate,
+      fecha:formattedDate,
       id:id_
     })
   }
