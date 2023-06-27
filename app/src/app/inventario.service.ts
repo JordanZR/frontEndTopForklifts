@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InventarioService {
-  private apiUrl = 'http://localhost:4000/inventario';
+  private apiUrl = 'https://backendtopforklifts.onrender.com/inventario';
 
   constructor(private http: HttpClient) { }
 

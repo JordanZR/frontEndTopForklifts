@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  private apiUrl = 'http://localhost:4000/usuarios';
+  private apiUrl = 'https://backendtopforklifts.onrender.com/usuarios';
 
   constructor(private http: HttpClient) { }
 

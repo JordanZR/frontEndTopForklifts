@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BoletaService {
-  private apiUrl = 'http://localhost:4000/boleta';
-  private apirUrl2 = 'http://localhost:4000/boletas'
+  private apiUrl = 'https://backendtopforklifts.onrender.com/boleta';
+  private apirUrl2 = 'https://backendtopforklifts.onrender.com/boletas'
 
   constructor(private http: HttpClient) { }
 

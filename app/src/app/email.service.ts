@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EmailService {
 
-  private apiUrl = 'http://localhost:4000/email';
+  private apiUrl = 'https://backendtopforklifts.onrender.com/email';
   //private apiUrl = 'http://localhost:4000/email';
 
   constructor(private http: HttpClient) { }

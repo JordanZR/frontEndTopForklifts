@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CotizacionesService {
-  private apiUrl = 'http://localhost:4000/cotizacion';
+  private apiUrl = 'https://backendtopforklifts.onrender.com/cotizacion';
 
 
   constructor(private http: HttpClient) { }
